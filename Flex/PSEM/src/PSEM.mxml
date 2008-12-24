@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" currentState="Login">
+	<mx:states>
+		<mx:State name="Active">
+			<mx:AddChild position="lastChild">
+				<mx:HBox left="5" right="5" top="5" bottom="5">
+					<mx:VBox width="50%" height="100%">
+						<mx:Label text="PSEM Web Client V2.0" width="100%" textAlign="center"/>
+						<mx:Label text="Written by Chris Mannes" textAlign="center" width="100%"/>
+						<mx:HBox width="100%">
+							<mx:Label text="Screen Mode" width="50%" textAlign="right"/>
+							<mx:ComboBox width="50%">
+							<mx:dataProvider>
+                <mx:Array>
+                    <mx:String>Left</mx:String>
+                    <mx:String>Right</mx:String>
+                    <mx:String>Full</mx:String>
+                </mx:Array>
+            </mx:dataProvider>
+								</mx:ComboBox>
+						</mx:HBox>
+						<mx:HBox width="100%">
+							<mx:Label text="Image Mode" textAlign="right" width="50%"/>
+							<mx:ComboBox width="50%">							<mx:dataProvider>
+                <mx:Array>
+                    <mx:String>Secondary</mx:String>
+                    <mx:String>Backscatter</mx:String>
+                </mx:Array>
+            </mx:dataProvider></mx:ComboBox>
+						</mx:HBox>
+						<mx:HBox width="100%">
+							<mx:Button label="Move" width="20%"/>
+							<mx:Label text="X" textAlign="right" width="15%"/>
+							<mx:TextInput width="25%"/>
+							<mx:Label text="Y" textAlign="right" width="15%"/>
+							<mx:TextInput width="25%"/>
+						</mx:HBox>
+						<mx:HBox width="100%">
+							<mx:ComboBox width="20%">							<mx:dataProvider>
+                <mx:Array>
+                    <mx:String>Zoom</mx:String>
+                    <mx:String>Min</mx:String>
+                    <mx:String>100x</mx:String>
+                    <mx:String>1000x</mx:String>
+                    <mx:String>10000x</mx:String>
+                </mx:Array>
+            </mx:dataProvider></mx:ComboBox>
+							<mx:Button label="&lt;&lt;" width="20%"/>
+							<mx:Button label="&lt;" width="20%"/>
+							<mx:Button label="&gt;" width="20%"/>
+							<mx:Button label="&gt;&gt;" width="20%"/>
+						</mx:HBox>
+						<mx:HBox width="100%">
+							<mx:Label text="Brightness" textAlign="center" width="20%"/>
+							<mx:Button label="&lt;&lt;" width="20%"/>
+							<mx:Button label="&lt;" width="20%"/>
+							<mx:Button label="&gt;" width="20%"/>
+							<mx:Button label="&gt;&gt;" width="20%"/>
+						</mx:HBox>
+<mx:HBox width="100%">
+							<mx:Label text="Contrast" textAlign="center" width="20%"/>
+							<mx:Button label="&lt;&lt;" width="20%"/>
+							<mx:Button label="&lt;" width="20%"/>
+							<mx:Button label="&gt;" width="20%"/>
+							<mx:Button label="&gt;&gt;" width="20%"/>
+						</mx:HBox>
+						<mx:HBox width="100%">
+							<mx:Button label="Refresh" width="33%"/>
+							<mx:Button label="AutoFocus" width="33%"/>
+							<mx:Button label="Save" width="33%"/>
+						</mx:HBox>
+						<mx:HBox width="100%">
+							<mx:Button label="Xray Map (off)" width="33%"/>
+							<mx:Button label="Start" width="33%"/>
+							<mx:Button label="Stop" width="33%"/>
+						</mx:HBox>
+						<mx:TextInput width="100%"/>
+					</mx:VBox>
+					<mx:Image source="assets/initial.jpg" width="50%"/>
+				</mx:HBox>
+			</mx:AddChild>
+		</mx:State>
+		<mx:State name="Login">
+			<mx:AddChild position="lastChild">
+				<mx:VBox left="5" right="5" top="5" bottom="5">
+					<mx:HBox width="100%">
+						<mx:Label text="Label"/>
+						<mx:TextInput/>
+					</mx:HBox>
+					<mx:HBox width="100%">
+						<mx:Label text="Label"/>
+						<mx:TextInput/>
+					</mx:HBox>
+					<mx:Button label="Button" click="currentState='Active'"/>
+				</mx:VBox>
+			</mx:AddChild>
+		</mx:State>
+	</mx:states>
+	
+</mx:Application>
